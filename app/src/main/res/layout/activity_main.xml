@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="auto"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/dinnerLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@null"
+            android:src="@drawable/dd_logo" />
+
+        <TextView
+            android:id="@+id/foodOutput"
+            style="@style/marginLR20"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:text="@string/app_name"
+            android:textAllCaps="true"
+            android:textSize="36sp"
+            android:textStyle="bold|italic" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="29dp" />
+
+        <EditText
+            android:id="@+id/foodInput"
+            style="@style/marginLR20"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:hint="@string/inputMessage"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/addBtn"
+            android:onClick="addBtnClick"
+            style="@style/coolBtn"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/addBtn" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/decideBtn"
+            android:onClick="decideBtnClick"
+            style="@style/coolBtn"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_gravity="bottom"
+            android:focusable="auto"
+            android:text="@string/decideBtn" />
+    </LinearLayout>
+
+</RelativeLayout>

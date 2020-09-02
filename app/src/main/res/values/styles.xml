@@ -7,4 +7,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="LayoutCenter" >
+        <item name="android:gravity">center|center_vertical</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="marginLR20" parent="LayoutCenter">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
+
+    <style name="coolBtn" parent="LayoutCenter">
+        <item name="android:background">#112FF4</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
