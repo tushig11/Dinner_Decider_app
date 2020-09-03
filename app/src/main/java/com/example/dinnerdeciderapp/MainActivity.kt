@@ -2,7 +2,9 @@ package com.example.dinnerdeciderapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.random.Random
 
@@ -16,9 +18,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun addBtnClick(view: View){
-        choices.add(foodInput.text.toString())
-        foodOutput.text = choices[choices.size-1]
-        print(choices.size)
+        if(TextUtils.isEmpty(foodInput.text)) {
+            Toast.makeText(this, "Please enter your food name", Toast.LENGTH_LONG).show()
+        }else{
+            choices.add(foodInput.text.toString())
+            foodOutput.text = choices[choices.size - 1]
+        }
     }
 
     fun decideBtnClick(view: View){
